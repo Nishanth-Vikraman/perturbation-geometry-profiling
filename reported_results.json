@@ -1,0 +1,36 @@
+{
+  "note": "Exploratory proof-of-concept values reported in the originating analysis. Re-run experiments/digits_pgp.py before treating them as reproduced results.",
+  "accuracy": {
+    "linear": 0.927,
+    "mlp": 0.989,
+    "cnn": 0.991,
+    "cnn_scrambled": 0.973,
+    "tinyvit": 0.967
+  },
+  "input_geometry": {
+    "linear": {"near_far_ratio": 0.99, "distance_correlation": 0.08, "pair_interaction": 0.0},
+    "mlp": {"near_far_ratio": 1.09, "distance_correlation": -0.07, "pair_interaction": 0.039},
+    "cnn": {"near_far_ratio": 8.35, "distance_correlation": -0.81, "pair_interaction": 0.070},
+    "cnn_scrambled": {"near_far_ratio": 0.92, "distance_correlation": -0.01, "pair_interaction": 0.069},
+    "tinyvit": {"near_far_ratio": 1.72, "distance_correlation": -0.13, "pair_interaction": 0.162}
+  },
+  "internal_geometry": {
+    "mlp": {"effective_response_rank": 12.7, "pair_interaction": 0.018, "response_redundancy": 0.394, "sample_dependence": 0.11},
+    "cnn": {"effective_response_rank": 14.9, "pair_interaction": 0.022, "response_redundancy": 0.337, "sample_dependence": 0.13},
+    "cnn_scrambled": {"effective_response_rank": 17.5, "pair_interaction": 0.024, "response_redundancy": 0.340, "sample_dependence": 0.11},
+    "tinyvit": {"effective_response_rank": 48.4, "pair_interaction": 0.080, "response_redundancy": 0.155, "sample_dependence": 0.76}
+  },
+  "shifted_accuracy": {
+    "linear": 0.433,
+    "mlp": 0.461,
+    "cnn": 0.552,
+    "cnn_scrambled": 0.442,
+    "tinyvit": 0.448
+  },
+  "low_data_300": {
+    "mlp": {"clean_mean": 0.946, "clean_std": 0.011, "shifted_mean": 0.439, "shifted_std": 0.029},
+    "cnn": {"clean_mean": 0.944, "clean_std": 0.006, "shifted_mean": 0.503, "shifted_std": 0.020},
+    "cnn_scrambled": {"clean_mean": 0.916, "clean_std": 0.009, "shifted_mean": 0.372, "shifted_std": 0.020},
+    "tinyvit": {"clean_mean": 0.859, "clean_std": 0.023, "shifted_mean": 0.342, "shifted_std": 0.047}
+  }
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perturbation-geometry-profiling"
+version = "0.1.0"
+description = "Finite-perturbation geometry diagnostics for model-data fit"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "scikit-learn>=1.4",
+  "pandas>=2.1",
+  "torch>=2.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
